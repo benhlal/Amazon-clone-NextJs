@@ -1,9 +1,11 @@
 import Image from "next/image";
 import {
+    LocationMarkerIcon,
     MenuIcon,
     SearchIcon,
     ShoppingCartIcon
 } from "@heroicons/react/outline"
+
 
 function Header() {
     return (
@@ -17,7 +19,13 @@ function Header() {
                         objectFit={"contain"}
                         className={'cursor-pointer'}/>
                 </div>
-
+                <div className={'text-white hidden sm:flex items-center ml-1 text-xs space-x-6 mx-6 whitespace-nowrap'}>
+                    <div className={' flex flex-col link'}>
+                        <p>Deliver to Youness</p>
+                        <p className={' flex  items-center mr-2  font-bold md:text-sm whitespace-nowrap'}><LocationMarkerIcon
+                            className={'h-5 mr-1'}/>48 Street ...94130</p>
+                    </div>
+                </div>
                 <div
                     className={'hidden sm:flex items-center h-10 rounded-md cursor-pointer bg-yellow-400  flex-grow hover:bg-yellow-500'}>
                     <input
@@ -30,17 +38,17 @@ function Header() {
                 <div className={'text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap'}>
                     <div className={'link'}>
                         <p>Hello Youness</p>
-                        <p className={'font-extrabold md:text-sm'}>Account & Lists</p>
+                        <p className={'font-bold md:text-sm'}>Account & Lists</p>
                     </div>
                     <div className={'link'}>
                         <p>Returns</p>
-                        <p className={'font-extrabold md:text-sm'}> & Orders</p>
+                        <p className={'font-bold md:text-sm'}> & Orders</p>
                     </div>
                     <div className={'relative link flex items-center'}>
                         <span
                             className={'absolute top-0 right-0 md:right-10 h-4 w-4 bg-yellow-400 text-center cursor-pointer rounded-full text-black font-bold'}>0</span>
                         <ShoppingCartIcon className={'h-10'}/>
-                        <p className={' hidden md:inline font-extrabold md:text-sm mt-2'}>Basket</p>
+                        <p className={' hidden md:inline font-bold md:text-sm mt-2'}>Basket</p>
                     </div>
                 </div>
             </div>
