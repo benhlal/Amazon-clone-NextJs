@@ -5,7 +5,7 @@
 @layer components {
     .link {
         @apply cursor-pointer hover:underline;
-    }   
+    }
 
     .button { 
         @apply p-2 text-xs md:text-sm

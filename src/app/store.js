@@ -1,8 +1,11 @@
-import { configureStore } from "@reduxjs/toolkit";
+import {configureStore} from "@reduxjs/toolkit";
 import basketReducer from "../slices/basketSlice";
 
+//BIG ONION
 export const store = configureStore({
-  reducer: {
-    basket: basketReducer,
-  },
+    //SLICE
+    reducer: {
+        basket: basketReducer,
+    },
+
 });
