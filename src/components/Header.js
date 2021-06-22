@@ -1,10 +1,5 @@
 import Image from "next/image";
-import {
-    LocationMarkerIcon,
-    MenuIcon,
-    SearchIcon,
-    ShoppingCartIcon
-} from "@heroicons/react/outline"
+import {LocationMarkerIcon, MenuIcon, SearchIcon, ShoppingCartIcon} from "@heroicons/react/outline"
 import {signIn, signOut, useSession} from "next-auth/client";
 import {useRouter} from "next/router";
 import {useSelector} from "react-redux";

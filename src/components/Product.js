@@ -2,7 +2,7 @@ import Image from "next/image";
 import {useState} from "react";
 import {StarIcon} from "@heroicons/react/solid";
 import Currency from 'react-currency-formatter';
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {addToBasket} from "../slices/basketSlice";
 
 function Product({id, title, description, category, image, price}) {

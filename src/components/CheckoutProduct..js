@@ -3,7 +3,6 @@ import {StarIcon} from "@heroicons/react/solid";
 import Currency from "react-currency-formatter";
 import {addToBasket, removeFromBasket} from "../slices/basketSlice";
 import {useDispatch} from "react-redux";
-import addItemToBasket from './Product'
 
 function CheckoutProduct({id, title, description, category, image, price, ratting, hasPrime}) {
 
@@ -45,7 +44,7 @@ function CheckoutProduct({id, title, description, category, image, price, rattin
             </div>
 
             <div className="flex flex-col space-y-2 my-auto justify-self-end">
-                <button className="mt-auto button" onClick={addMoreItemsFromBasket}>Add to basket</button>
+                <button   className="mt-auto button" onClick={addMoreItemsFromBasket}>Add to basket</button>
                 <button className="mt-auto button" onClick={removeItemsFromBasket}>Remove from basket</button>
             </div>
         </div>
