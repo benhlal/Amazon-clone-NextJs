@@ -24,14 +24,17 @@ function Header() {
                         objectFit={"contain"}
                         className={'cursor-pointer'}/>
                 </div>
-                <div className={'text-white hidden sm:flex items-center ml-1 text-xs space-x-6 mx-6 whitespace-nowrap'}>
+                {session ? (<div
+                    className={'text-white hidden sm:flex items-center ml-1 text-xs space-x-6 mx-6 whitespace-nowrap'}>
                     <div className={' flex flex-col link'}>
-                        <p>Deliver to Youness</p>
+
+                        <p> Deliver to {session.user.name.split(' ')[0]}</p>
                         <p className={' flex  items-center mr-2  font-bold md:text-sm whitespace-nowrap'}>
                             <LocationMarkerIcon
                                 className={'h-5 mr-1'}/>48 Street ...94130</p>
                     </div>
-                </div>
+                </div>) : ''}
+
                 <div
                     className={'hidden sm:flex items-center h-10 rounded-md cursor-pointer bg-yellow-400  flex-grow hover:bg-yellow-500'}>
                     <input
@@ -55,7 +58,7 @@ function Header() {
                             className={'absolute top-0 right-0 md:right-10 h-4 w-4 bg-yellow-400 ' +
                             'text-center cursor-pointer rounded-full text-black font-bold'}>{itemsFromStore.length}</span>
                         <ShoppingCartIcon className={'h-10'} onClick={() => router.push('/checkout')}/>
-                        <p className={' hidden md:inline font-bold md:text-sm mt-2'}>Basket
+                        <p className={'hidden md:inline font-bold md:text-sm mt-2'}>Basket
                         </p>
                     </div>
                 </div>
